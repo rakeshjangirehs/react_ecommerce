@@ -81,3 +81,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Commands
     * rm -rf file
         Remove File
+
+### 
+Prop Tunneling
+Lift State Up
+HigherOrderComponent
