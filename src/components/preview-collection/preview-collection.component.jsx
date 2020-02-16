@@ -11,8 +11,8 @@ const CollectionPreview = ({title, items})=>{
             <h1 className="title">{title.toUpperCase()}</h1>
             <div className="preview">
             {
-                items.sort(()=>(.5 - Math.random())).slice(0,4).map(({id, ...otherItemPorps})=>(
-                    <CollectionItem key={id} {...otherItemPorps}/>
+                items.sort(()=>(.5 - Math.random())).slice(0,4).map((item)=>(
+                    <CollectionItem key={item.id} item={item}/>
                 ))
             }
             </div>
