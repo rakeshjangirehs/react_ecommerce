@@ -7,11 +7,11 @@ import './collections-overview.styles.scss';
 
 import CollectionPreview from '../../components/preview-collection/preview-collection.component';
 
-const CollectionsOverview = ({ collections }) => (
+const CollectionsOverview = ({ collections, match }) => (
     <div className="collections-overview">
         {
             collections.map(({id, ...otherCollectionProps})=>(
-                <CollectionPreview key={id} {...otherCollectionProps} />
+                <CollectionPreview key={id} {...otherCollectionProps} basePath={match.path}/>
             ))
         }
     </div>
