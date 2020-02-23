@@ -35,13 +35,11 @@ class App extends React.Component{
             ...snapShot.data()
           });
         });
-      } else {
-        setCurrentUser(userAuth);
-
-        // Add collections first time to firebase.
-        // console.log(collectionsArray.map(({title, items})=> ({title, items}) ));
-        // addCollectionAndDocuments('collections', collectionsArray.map(({title, items})=> ({title, items}) ));
       }
+
+      setCurrentUser(userAuth);
+      // Add collections first time to firebase.
+      // addCollectionAndDocuments('collections', collectionsArray.map(({title, items})=> ({title, items}) ));      
     });
   }
 

@@ -26,11 +26,25 @@ class ShopPage extends React.Component{
 
         const collectionRef = firestore.collection('collections');
 
-        this.unsubscribeFromSnapshot = collectionRef.onSnapshot(async (snapshot) => {
+        // Observer-Observable Pattern
+        /*this.unsubscribeFromSnapshot = collectionRef.onSnapshot(async (snapshot) => {
+            const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+            updateCollections(collectionsMap);
+            this.setState({loading: false});
+        });*/
+
+        // Promise Pattern
+        collectionRef.get().then((snapshot) => {
             const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
             updateCollections(collectionsMap);
             this.setState({loading: false});
         });
+
+        /*const project_id = "react-ecommerce-app-150e1";
+        fetch(`https://firestore.googleapis.com/v1/projects/${project_id}/databases/(default)/documents/collections`)
+        .then(response=> response.json())
+        .then(collections => console.log(collections));*/
+
     }
 
     componentWillUnmount = () => {
@@ -41,7 +55,6 @@ class ShopPage extends React.Component{
 
         const { match } = this.props;
         const { loading } = this.state;
-        
         return (
             <div className="shop-page">
                 <Route exact path={`${match.path}`} render={(props) => <CollectionsOverviewWithSpinner isLoading={loading} {...props} />} />
