@@ -86,3 +86,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Prop Tunneling
 Lift State Up
 HigherOrderComponent
+
+Heroku COmmands
+    heroku --version    //show version of heroku cli
+    heroku login    //heroku login
+    heroku logout   //logout heroku cli
+    heroku create <app_name> [--buildpack <builpack_url]    //create app on heroku (optionally can use buildpack)
+    git push heroku master [--force] // push code to heroku
+    heroku apps //show list of apps on heroku
+    git:remote -a <app_name>    //add heroku app as remote of local project
+    heroku buildpacks // show list of buildpack used in your app
+    heroku buildpacks:remove https://github.com/mars/create-react-app-buildpack.git //removed specific buildpack
+    heroku logs --tail
+    heroku config:set STRIPE_SECRET_KEY=sk_test_C6BoETwdUE3RKnrGvk545YUb00x2wtgzFt  //Set env variable
+    heroku open //open app in browser
