@@ -1,38 +1,38 @@
 const INITIAL_STATE = {
-    sections : [
-        {
-            id: 1,
-            title: 'hats',
-            imageUrl: 'https://www.barts.eu/wp-content/uploads/2019/03/1911_Jamaica-Cap_04-1200x664.png',
-            linkUrl: 'shop/hats',
-        },
-        {
-            id: 2,
-            title: 'jackets',
-            imageUrl: 'https://www.barts.eu/wp-content/uploads/2019/03/1911_Jamaica-Cap_04-1200x664.png',
-            linkUrl: 'shop/jackets',
-        },
-        {
-            id: 3,
-            title: 'sneakers',
-            imageUrl: 'https://www.barts.eu/wp-content/uploads/2019/03/1911_Jamaica-Cap_04-1200x664.png',
-            linkUrl: 'shop/sneakers',
-        },
-        {
-            id: 4,
-            title: 'womens',
-            imageUrl: 'https://www.barts.eu/wp-content/uploads/2019/03/1911_Jamaica-Cap_04-1200x664.png',
-            linkUrl: 'shop/womens',
-            size: 'large',
-        },
-        {
-            id: 5,
-            title: 'mens',
-            imageUrl: 'https://www.barts.eu/wp-content/uploads/2019/03/1911_Jamaica-Cap_04-1200x664.png',
-            linkUrl: 'shop/mens',
-            size: 'large',
-        },
-    ]
+  sections: [
+    {
+      title: 'hats',
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      id: 1,
+      linkUrl: 'shop/hats'
+    },
+    {
+      title: 'jackets',
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      id: 2,
+      linkUrl: 'shop/jackets'
+    },
+    {
+      title: 'sneakers',
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      id: 3,
+      linkUrl: 'shop/sneakers'
+    },
+    {
+      title: 'womens',
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      size: 'large',
+      id: 4,
+      linkUrl: 'shop/womens'
+    },
+    {
+      title: 'mens',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      size: 'large',
+      id: 5,
+      linkUrl: 'shop/mens'
+    }
+  ]
 };
 
 const directoryReducer = (state=INITIAL_STATE, action) => {

@@ -2,8 +2,6 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
-import { ReactComponent as Logo } from '../../assets/logo.svg';
-
 const StripeCheckoutButton = ({ price }) => {
     //Stripe needs price in cents and we are passing dollers.
 
